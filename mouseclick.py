@@ -10,11 +10,9 @@ if __name__ == '__main__':
     # Start foo as a process
     p = multiprocessing.Process(target=foo)
     p.start()
-
     # Wait 10 seconds for foo
     time.sleep(10)
     # Terminate foo
     p.terminate()
-
     # Cleanup
     p.join()
